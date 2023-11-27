@@ -1,0 +1,110 @@
+
+body {
+    background: black;
+}
+
+.canvas-context {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#mapCanvas, #staticObjCanvas, #dynamicObjCanvas {
+    position: absolute;
+
+}
+
+.registration {
+    font-size: medium;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.registration input[type="submit"] {
+    position: relative;
+    top: 10px;
+    width: 170px;
+    height: 40px;
+
+}
+
+.registration input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(3em + 2px);
+    margin: 0 0 1em;
+    padding: 6px;
+    border: 1px solid #bababa;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.closeLeaderboardModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.info {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    display: grid;
+    top: 0;
+    right: 200px;
+    margin-left: 20px;
+    color: white;
+}
+
+#leaderboardModalContent {
+    background: white;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gray;
+    color: black;
+    font-weight: bold;
+}

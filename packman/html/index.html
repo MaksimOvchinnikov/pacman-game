@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pacman</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style>
+        body{
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration">
+        <h1>Регистрация</h1>
+        <form id="registrationForm" action="main.html" method="get" >
+            <input type="text" id="nickname" placeholder="Ваш никнейм" autocomplete="off"><br>
+            <input type="submit" value="Играть! ">
+        </form>
+    </div>
+
+    <script>
+        let registrationForm = document.getElementById("registrationForm");
+        let nicknameInput = document.getElementById("nickname");
+        let prevNickname = localStorage.getItem("pacman.nickname");
+
+        if (prevNickname) {
+            nicknameInput.value = prevNickname;
+        }
+
+
+        registrationForm.addEventListener("submit", function(event){
+            let nickname = nicknameInput.value;
+            if (nickname.trim() !== "") {
+                localStorage.setItem("pacman.nickname", nickname);
+                window.location.href = "main.html";
+            } else {
+                alert("Введите ник!")
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

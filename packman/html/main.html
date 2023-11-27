@@ -1,0 +1,55 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pac-man</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="canvas-context">
+    <canvas id="mapCanvas"></canvas>
+    <canvas id="staticObjCanvas"></canvas>
+    <canvas id="dynamicObjCanvas"></canvas>
+</div>
+
+<div class="info">
+    <div class="info-content">
+        <p>Уровень: <span id="lvl"></span></p>
+        <p>Счет: <span id="score">0</span></p>
+        <p>Количество жизней: <span id="life"></span></p>
+    </div>
+</div>
+
+
+
+<div class="modal"  id="loseAndWin">
+    <div class="modal-content">
+        <h2 id="context"></h2>
+        <div class="buttons">
+            <button id="start">Начать заново</button>
+            <button id="leaderboard">Таблица лидеров</button>
+        </div>
+    </div>
+</div>
+
+<div id="leaderboardModal" class="modal">
+    <div class="modal-content" id="leaderboardModalContent">
+        <span class="closeLeaderboardModal" id="closeLeaderboardModal">&times;</span>
+        <h2>Таблица лидеров</h2>
+        <table id="leaderboardTable">
+        </table>
+    </div>
+</div>
+
+<div class="modal" id="nextLevel">
+    <div class="modal-content">
+        <h2>Победа! Приготовьтесь к следующему уровню</h2>
+    </div>l
+</div>
+
+
+
+<script src="/src/index.js" type="module"></script>
+</body>
+
+</html>
